@@ -1,7 +1,11 @@
 import requests
 import json
 from retriever import create_retriever
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+api_key = os.getenv("OPENROUTER_API_KEY")
 Chunks, query = create_retriever()
 
 def create_llm():
@@ -10,7 +14,7 @@ def create_llm():
     response = requests.post(
         url="https://openrouter.ai/api/v1/chat/completions",
           headers={
-              "Authorization": f"Bearer ",
+              "Authorization": f"Bearer {api_key}",
               "Content-Type": "application/json"
               },
               data=json.dumps({
