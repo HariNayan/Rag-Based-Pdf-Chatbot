@@ -100,3 +100,15 @@ streamlit run app.py
 ```
 
 ---
+
+🎯 Learning Objectives
+
+This project demonstrates practical understanding of:
+
+- Retrieval-Augmented Generation (RAG)
+- Vector embeddings and semantic search
+- FAISS vector indexing
+- Prompt engineering
+- LLM API integration
+- Streamlit application development
+- Modular software architecture
