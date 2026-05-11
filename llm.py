@@ -6,11 +6,12 @@ import os
 
 load_dotenv()
 api_key = os.getenv("OPENROUTER_API_KEY")
-Chunks, query = create_retriever()
 
-def create_llm():
+def create_llm(user_question, history):
+    Chunks = create_retriever(user_question)
     context=' '.join(Chunks)
-    Prompt = f"context: {context} Questions: {query} Answer only from the context."
+    conversation_history = '\n'.join(history)
+    Prompt = f"conversation_history:{conversation_history} \n context: {context} \n Questions: {user_question} Answer only from the context."
     response = requests.post(
         url="https://openrouter.ai/api/v1/chat/completions",
           headers={
