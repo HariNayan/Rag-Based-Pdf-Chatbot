@@ -56,3 +56,19 @@ Prompt Construction + Chat History
 LLM Response Generation (OpenRouter)
    ↓
 Streamlit Chat Interface
+```
+
+---
+
+## 📂 Project Structure
+
+pdfchat/
+├── app.py              # Streamlit user interface
+├── llm.py              # Prompt creation and OpenRouter API calls
+├── retriever.py        # FAISS similarity search
+├── embeddings.py       # Embedding generation
+├── chunker.py          # Text chunking logic
+├── uploaded_pdfs.py    # PDF loading and text extraction
+├── .env                # API keys
+├── requirements.txt
+└── README.md
