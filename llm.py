@@ -7,8 +7,8 @@ import os
 load_dotenv()
 api_key = os.getenv("OPENROUTER_API_KEY")
 
-def create_llm(user_question, history):
-    Chunks = create_retriever(user_question)
+def create_llm(user_question, history, uploaded_pdfs):
+    Chunks = create_retriever(user_question, uploaded_pdfs)
     context=' '.join(Chunks)
     conversation_history = '\n'.join(history)
     Prompt = f"conversation_history:{conversation_history} \n context: {context} \n Questions: {user_question} Answer only from the context."

@@ -1,13 +1,14 @@
-from pdf_loader import PDFloader
-clean_lines = PDFloader()
-def create_chunker():
+from uploaded_pdfs import PDFloader
+
+def create_chunker(uploaded_pdfs):
+    clean_lines = PDFloader(uploaded_pdfs)
     chunks = []
     chunk = ''
     count = 0
     for line in clean_lines:
         chunk = chunk + ' ' + line
         count = count + 1
-        if count == 5:
+        if count == 10:
             chunks.append(chunk)
             chunk = ""
             count = 0

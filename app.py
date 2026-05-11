@@ -27,6 +27,11 @@ if 'history' not in st.session_state:
 if 'messages' not in st.session_state:
     st.session_state.messages = []
 
+if st.sidebar.button('New chat'):
+    st.session_state.messages = []
+    st.session_state.history = []
+    st.rerun()
+
 for messages in st.session_state.messages:
     with st.chat_message(messages['role']):
         st.markdown(messages['content'])
@@ -36,7 +41,8 @@ if prompt:= st.chat_input("Enter Query Here"):
     with st.chat_message('user'):
         st.markdown(prompt)
     st.session_state.messages.append({'role': 'user' , 'content': prompt})
-    answer = create_llm(prompt, st.session_state.history)
+    with st.spinner('🤖 Thinking...'):
+        answer = create_llm(prompt, st.session_state.history, uploaded_pdfs)
 
     with st.chat_message('assistant'):
         st.markdown(answer)

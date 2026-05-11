@@ -1,8 +1,8 @@
 from sentence_transformers import SentenceTransformer
 from chunker import create_chunker
-chunks = create_chunker()
 
-def create_embeddings():
+def create_embeddings(uploaded_pdfs):
+    chunks = create_chunker(uploaded_pdfs)
     model = SentenceTransformer('all-MiniLM-L6-v2')
     embeddings = []
     for chunk in chunks: 
