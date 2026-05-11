@@ -84,7 +84,7 @@ Setup
 3. Install dependencies
 4. Add your OPENROUTER_API_KEY to a .env file
 5. Run the Streamlit application
-
+```
 git clone https://github.com/HariNayan/Rag-Based-Pdf-Chatbot.git
 cd Rag-Based-Pdf-Chatbot
 python -m venv .venv
@@ -97,3 +97,6 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+---
