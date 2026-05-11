@@ -77,4 +77,23 @@ pdfchat/
 
 ---
 
+Setup
 
+1. Clone the repository
+2. Create a virtual environment
+3. Install dependencies
+4. Add your OPENROUTER_API_KEY to a .env file
+5. Run the Streamlit application
+
+git clone https://github.com/HariNayan/Rag-Based-Pdf-Chatbot.git
+cd Rag-Based-Pdf-Chatbot
+python -m venv .venv
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+
+# Linux/macOS
+source .venv/bin/activate
+
+pip install -r requirements.txt
+streamlit run app.py
