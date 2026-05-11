@@ -1,62 +1,58 @@
-# RAG-Based PDF Chatbot
+# 📄 RAG-Based PDF Chatbot
 
-<img width="1774" height="887" alt="ChatGPT Image May 9, 2026, 04_12_39 AM (2)" src="https://github.com/user-attachments/assets/11e40fca-8c5d-4776-93ca-016f3a49f212" />
+<img width="1774" height="887" alt="RAG-Based PDF Chatbot Screenshot" src="https://github.com/user-attachments/assets/11e40fca-8c5d-4776-93ca-016f3a49f212" />
 
-A Retrieval-Augmented Generation (RAG) based PDF chatbot built using Python, FAISS, Sentence Transformers, and LLM APIs.
+An end-to-end Retrieval-Augmented Generation (RAG) application that allows users to upload multiple PDF documents and ask natural language questions grounded in the document content.
 
-## Features
+---
 
-* PDF text extraction using PyPDF2
-* Semantic chunk embeddings using Sentence Transformers
-* FAISS vector database for similarity search
-* Context-aware question answering
-* Retrieval-Augmented Generation (RAG) pipeline
-* Modular backend architecture
+## 🚀 Features
 
-## Tech Stack
+- 📄 Multi-PDF upload and text extraction using PyPDF2
+- ✂️ Text chunking for efficient document processing
+- 🧠 Semantic embeddings using Sentence Transformers
+- 🔍 FAISS vector database for similarity search
+- 🤖 Context-aware answer generation using OpenRouter LLM APIs
+- 💬 Conversational memory for follow-up questions
+- 🆕 New Chat button to reset conversation history
+- ⏳ Loading spinner during response generation
+- 🏗️ Modular architecture for easy extension and maintenance
+- 🌐 Interactive web interface built with Streamlit
 
-* Python
-* PyPDF2
-* Sentence Transformers
-* FAISS
-* NumPy
-* OpenRouter / Gemini API
+---
 
-## Architecture
+## 🛠️ Tech Stack
 
-PDF → Text Extraction → Chunking → Embeddings → FAISS Retrieval → Context Injection → LLM Response
+- Python
+- Streamlit
+- PyPDF2
+- Sentence Transformers (`all-MiniLM-L6-v2`)
+- FAISS
+- NumPy
+- Requests
+- OpenRouter API
 
-## Current Progress
+---
 
-* Basic RAG pipeline completed
-* Semantic retrieval working
-* LLM response generation integrated
-* Modularization in progress
+## 🏗️ Architecture
 
-## Future Improvements
-
-* Multi-PDF support
-* Conversational memory
-* Streamlit UI
-* Persistent vector database
-* Better chunking strategies
-* Source/page citations
-
-## Setup
-
-1. Clone the repository
-2. Create virtual environment
-3. Install dependencies
-4. Add API keys
-5. Run the chatbot
-
-## Learning Goals
-
-This project focuses on understanding:
-
-* Vector embeddings
-* Semantic search
-* Retrieval systems
-* RAG architecture
-* Modular backend design
-* LLM integration
+```text
+PDF Upload
+   ↓
+Text Extraction (PyPDF2)
+   ↓
+Text Cleaning
+   ↓
+Chunking
+   ↓
+Sentence Embeddings
+   ↓
+FAISS Vector Index
+   ↓
+Semantic Retrieval
+   ↓
+Prompt Construction + Chat History
+   ↓
+LLM Response Generation (OpenRouter)
+   ↓
+Streamlit Chat Interface
