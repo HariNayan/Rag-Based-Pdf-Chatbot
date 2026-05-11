@@ -62,6 +62,7 @@ Streamlit Chat Interface
 
 ## 📂 Project Structure
 
+```text
 pdfchat/
 ├── app.py              # Streamlit user interface
 ├── llm.py              # Prompt creation and OpenRouter API calls
@@ -72,3 +73,8 @@ pdfchat/
 ├── .env                # API keys
 ├── requirements.txt
 └── README.md
+```
+
+---
+
+
